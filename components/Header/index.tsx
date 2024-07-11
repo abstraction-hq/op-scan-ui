@@ -11,13 +11,12 @@ import Notifications from "./Notifications";
 import Search from "./Search";
 
 type HeaderProps = {
-    title: string;
     visible?: boolean;
     showMenu?: boolean;
     onClickBurger?: () => void;
 };
 
-const Header = ({ title, visible, showMenu, onClickBurger }: HeaderProps) => {
+const Header = ({visible, showMenu, onClickBurger }: HeaderProps) => {
     const router = useRouter();
     const [visibleModalSearch, setVisibleModalSearch] =
         useState<boolean>(false);
@@ -52,18 +51,6 @@ const Header = ({ title, visible, showMenu, onClickBurger }: HeaderProps) => {
                             alt=""
                         />
                     </Link>
-                    <button
-                        className="group inline-flex items-center mr-auto text-h5 md:hidden"
-                        onClick={() => router.back()}
-                    >
-                        <div className="flex justify-center items-center w-10 h-10 mr-3.5 lg:mr-1">
-                            <Icon
-                                className="fill-theme-primary transition-transform group-hover:-translate-x-0.5"
-                                name="arrow-left"
-                            />
-                        </div>
-                        {title}
-                    </button>
                     <div className="flex items-center ml-auto space-x-6">
                         <button
                             className="btn-primary md:hidden"
