@@ -24,33 +24,21 @@ const Header = ({visible, showMenu, onClickBurger }: HeaderProps) => {
     const { colorMode } = useColorMode();
     return (
         <>
-            <div
-                className={`fixed top-0 right-0 z-10 bg-theme-n-8 md:z-30 md:px-4 md:py-2 md:transition-colors ${
-                    visible
-                        ? "left-[21.25rem] 2xl:left-76 xl:left-20 md:left-0"
-                        : "left-20 md:left-0"
-                } ${showMenu ? "md:!bg-theme-on-surface-1" : ""}`}
-            >
-                <div
-                    className={`flex items-center h-24 max-w-[80rem] mx-auto px-10 lg:px-6 md:h-16 md:px-4 md:bg-theme-on-surface-1 md:rounded-2xl md:transition-shadow ${
-                        showMenu
-                            ? "shadow-depth-1 dark:shadow-[inset_0_0_0_0.125rem_#272B30]"
-                            : ""
-                    }`}
-                >
-                    <Link className="hidden md:block mr-auto" href="/">
+            <div className={`fixed top-0 left-1/2 transform -translate-x-1/2 z-10 bg-theme-n-8 w-full max-w-[80rem] md:z-30 md:px-4 md:py-2 md:transition-colors`}>
+                <div className={`flex items-center h-24 w-full mx-auto px-10 lg:px-6 md:h-16 md:px-4 md:bg-theme-on-surface-1 md:rounded-2xl md:transition-shadow`}>
+                    <div className="flex justify-center items-center h-10 mr-3.5 lg:mr-1">
                         <Image
-                            className="w-9 opacity-100"
-                            src={
-                                colorMode === "light"
-                                    ? "/images/logo-dark.svg"
-                                    : "/images/logo-light.svg"
-                            }
+                            className="w-8 opacity-100"
+                            src={"/images/abs_logo.png"}
                             width={36}
                             height={36}
                             alt=""
                         />
-                    </Link>
+                        <div className="text-3xl font-bold ml-2 mt-1">
+                            ABS SCAN
+                        </div>
+                    </div>
+
                     <div className="flex items-center ml-auto space-x-6">
                         <button
                             className="btn-primary md:hidden"
@@ -70,9 +58,7 @@ const Header = ({visible, showMenu, onClickBurger }: HeaderProps) => {
                         <Notifications />
                         <button
                             className={`hidden rounded-full transition-shadow md:block ${
-                                showMenu
-                                    ? "shadow-[0_0_0_0.125rem_#0C68E9]"
-                                    : ""
+                                showMenu ? "shadow-[0_0_0_0.125rem_#0C68E9]" : ""
                             }`}
                             onClick={onClickBurger}
                         >
