@@ -114,31 +114,7 @@ const TransactionDetails = () => {
                 </div>
                 <div className="flex">
                     <div className="w-1/6">
-                        <span className="font-semibold">Value</span>
-                        <Tooltip
-                            className="-mb-0.25 md:mb-0"
-                            title={'The value being transacted in Ether and fiat value.'}
-                        />
-                    </div>
-                    <div className="flex space-x-1">
-                        <span className="text-gray-600 font-bold">0</span>
-                        <div>
-                            <Image
-                                className="w-6 opacity-100 group-hover:opacity-0"
-                                src={'/images/viction.jpeg'}
-                                width={12}
-                                height={12}
-                                alt=""
-                            />
-                            <span className="text-gray-600 ml-1">VIC ($0)</span>
-                        </div>
-                        <span className="text-gray-600">| VIC price: $0.318</span>
-                    </div>
-                </div>
-                <div className="flex">
-                    <span className="w-1/6 font-semibold">Fee</span>
-                    <div className="w-1/6">
-                        <span className="font-semibold">Fee</span>
+                        <span className="font-semibold">Fee (Sponsor by Abstraction)</span>
                         <Tooltip
                             className="-mb-0.25 md:mb-0"
                             title={'Amount paid to process the transaction in Ether and fiat value.'}
