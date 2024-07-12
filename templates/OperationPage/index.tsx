@@ -2,6 +2,7 @@
 
 import Layout from "@/components/Layout";
 import React from "react";
+import TransactionDetail from "@/templates/OperationPage/TransactionDetail";
 
 interface OperationPageProps {
     params: {
@@ -9,24 +10,12 @@ interface OperationPageProps {
     };
 }
 
-const OperationPage: React.FC<OperationPageProps> = ({params }) => {
-
-    // useEffect(() => {
-    //     const { id } = params;
-    //
-    //     const fetchNFTDetails = async (id: string) => {
-    //         // Replace this with your actual API call
-    //         const fetchedNFT: NFT = await fetchNFTById(id);
-    //         setNft(fetchedNFT);
-    //     };
-    //
-    //     fetchNFTDetails(id);
-    // }, [params]);
+const OperationPage: React.FC = () => {
 
     return (
-        <Layout >
+        <Layout>
             <div className="space-y-2">
-                haha
+                <TransactionDetail />
             </div>
         </Layout>
     );

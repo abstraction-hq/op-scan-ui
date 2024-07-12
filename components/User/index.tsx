@@ -19,7 +19,7 @@ const User = ({ className }: UserProps) => {
             <MenuButton className="group w-12 h-12">
                 <Image
                     className="w-12 h-12 object-cover rounded-full opacity-100"
-                    src="/images/avatar.jpg"
+                    src="/images/avatar-1.jpg"
                     width={48}
                     height={48}
                     alt=""
@@ -41,7 +41,7 @@ const User = ({ className }: UserProps) => {
                         <div className="">
                             <Image
                                 className="w-16 h-16 rounded-full opacity-100"
-                                src="/images/avatar.jpg"
+                                src="/images/avatar-1.jpg"
                                 width={64}
                                 height={64}
                                 alt=""

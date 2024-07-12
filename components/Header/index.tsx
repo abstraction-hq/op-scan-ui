@@ -64,7 +64,7 @@ const Header = ({visible, showMenu, onClickBurger }: HeaderProps) => {
                         >
                             <Image
                                 className="w-8 h-8 object-cover rounded-full opacity-100"
-                                src="/images/avatar.jpg"
+                                src="/images/avatar-1.jpg"
                                 width={32}
                                 height={32}
                                 alt=""
