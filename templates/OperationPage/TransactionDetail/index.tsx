@@ -46,7 +46,7 @@ const TransactionDetails = () => {
                         />
                     </div>
                     {/*<span className="text-green-600">Success</span>*/}
-                    <div className="flex justify-between items-center h-8 px-4 rounded-full bg-green-200 text-green-700 text-theme-white-fixed">
+                    <div className="flex justify-between items-center h-8 px-4 rounded-full bg-green-200">
                         <Icon
                             className="!w-4 !h-4 shrink-0 mr-2 fill-primary-2"
                             name="check-circle"
@@ -114,13 +114,13 @@ const TransactionDetails = () => {
                 </div>
                 <div className="flex">
                     <div className="w-1/6">
-                        <span className="font-semibold">Fee (Sponsor by Abstraction)</span>
+                        <span className="font-semibold">Fee</span>
                         <Tooltip
                             className="-mb-0.25 md:mb-0"
                             title={'Amount paid to process the transaction in Ether and fiat value.'}
                         />
                     </div>
-                    <span className="text-gray-600">0.00001298 VIC</span>
+                    <span className="text-gray-600">0.00001298 VIC (Sponsor by Abstraction)</span>
                 </div>
                 <div className="flex">
                     <div className="w-1/6">
