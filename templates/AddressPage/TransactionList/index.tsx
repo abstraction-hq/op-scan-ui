@@ -5,7 +5,7 @@ import Icon from "@/components/Icon";
 import Image from "@/components/Image";
 import Tooltip from "@/components/Tooltip";
 
-const TransactionDetails = () => {
+const TransactionLists = () => {
     return (
         <div className="mx-auto w-full p-4 rounded-lg">
             <div className="flex flex-col space-y-4">
@@ -191,19 +191,19 @@ const TransactionDetails = () => {
     );
 };
 
-type TransactionProps = {};
+type TransactionListProps = {};
 
-const TransactionDetail = ({}: TransactionProps) => {
+const TransactionList = ({}: TransactionListProps) => {
     const { colorMode } = useColorMode();
     const isDarkMode = colorMode === "dark";
 
     return (
         <Card title="Transaction Detail">
             <div className="flex mt-10 md:mt-4">
-                <TransactionDetails/>
+                <TransactionLists />
             </div>
         </Card>
     );
 };
 
-export default TransactionDetail;
+export default TransactionList;
