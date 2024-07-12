@@ -2,7 +2,7 @@
 
 import Layout from "@/components/Layout";
 import React from "react";
-import TransactionDetail from "@/templates/OperationPage/TransactionDetail";
+import Transaction from "@/templates/AddressPage/Transaction";
 import TopTokens from "@/templates/AddressPage/TopTokens";
 import GreedIndex from "@/templates/AddressPage/GreedIndex";
 
@@ -21,7 +21,7 @@ const AddressPage: React.FC = () => {
                     <TopTokens />
                     <GreedIndex />
                 </div>
-                <TransactionDetail />
+                <Transaction />
             </div>
         </Layout>
     );
