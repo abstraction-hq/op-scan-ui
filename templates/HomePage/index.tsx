@@ -2,10 +2,6 @@
 
 import Layout from "@/components/Layout";
 import Balance from "./Balance";
-import TopTokens from "./TopTokens";
-import GreedIndex from "./GreedIndex";
-import RecentActivities from "./RecentActivities";
-import NeuraAI from "./NeuraAI";
 
 const HomePage = () => {
     return (
