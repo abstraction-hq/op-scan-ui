@@ -35,7 +35,7 @@ const Card = ({
             <div className="relative z-2 flex justify-between items-center min-h-[2.5rem]">
                 {leftContent}
                 {title && (
-                    <div className="flex items-center text-2xl font-bold md:text-[1.125rem]">
+                    <div className="flex items-center mt-3 text-2xl font-bold md:text-[1.125rem]">
                         <div
                             className={`truncate ${
                                 options ? "md:max-w-[33vw]" : ""
