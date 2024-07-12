@@ -2,11 +2,12 @@ import { useState } from "react";
 import { useColorMode } from "@chakra-ui/color-mode";
 import Card from "@/components/Card";
 import Icon from "@/components/Icon";
+import Image from "@/components/Image";
 
 const TransactionDetails = () => {
     return (
         <div className="mx-auto w-full p-4 rounded-lg">
-            <div className="flex flex-col space-y-3">
+            <div className="flex flex-col space-y-4">
                 <div className="flex">
                     <span className="w-1/6 font-semibold">Transaction ID</span>
                     <div>
@@ -70,7 +71,20 @@ const TransactionDetails = () => {
                 </div>
                 <div className="flex">
                     <span className="w-1/6 font-semibold">Value</span>
-                    <span className="text-gray-600">0 VIC | VIC price: $0.318</span>
+                    <div className="flex space-x-1">
+                        <span className="text-gray-600 font-bold">0</span>
+                        <div>
+                            <Image
+                                className="w-6 opacity-100 group-hover:opacity-0"
+                                src={'/images/viction.jpeg'}
+                                width={12}
+                                height={12}
+                                alt=""
+                            />
+                            <span className="text-gray-600 ml-1">VIC ($0)</span>
+                        </div>
+                        <span className="text-gray-600">| VIC price: $0.318</span>
+                    </div>
                 </div>
                 <div className="flex">
                     <span className="w-1/6 font-semibold">Fee</span>
@@ -100,6 +114,16 @@ const TransactionDetails = () => {
                     <span className="w-1/6 font-semibold">Nonce & Position</span>
                     <span className="text-gray-600">1248 | 1</span>
                 </div>
+                <div className="flex">
+                    <span className="w-1/6 font-semibold">Input data</span>
+                    <div className="w-full ml-6 px-5 py-2 bg-gray-200">
+                        <div>Function: approve(address spender, uint256 value)</div>
+                        <div>MethodId: 0x095ea7b3</div>
+                        <div>[0]: 000000000000000000000000955daac579029cd1aeaa02a47845f6292f19d64f</div>
+                        <div>[1]: ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff</div>
+                    </div>
+                </div>
+                <button className="text-left px-2 py-1">Decode input data</button>
             </div>
         </div>
     );
