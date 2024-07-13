@@ -10,7 +10,7 @@ const TransactionDetails = () => {
         <div className="mx-auto w-full p-4 rounded-lg">
             <div className="flex flex-col space-y-4">
                 <div className="flex">
-                    <div className="w-1/6">
+                    <div className="w-1/6 flex items-center">
                         <span className="font-semibold">Transaction ID</span>
                         <Tooltip
                             className="-mb-0.25 md:mb-0"
@@ -28,7 +28,7 @@ const TransactionDetails = () => {
                     </div>
                 </div>
                 <div className="flex">
-                    <div className="w-1/6">
+                    <div className="w-1/6 flex items-center">
                         <span className="font-semibold">Type</span>
                         <Tooltip
                             className="-mb-0.25 md:mb-0"
@@ -38,7 +38,7 @@ const TransactionDetails = () => {
                     <button className="px-2 text-white py-1 bg-gray-400 rounded">Approve</button>
                 </div>
                 <div className="flex">
-                    <div className="w-1/6">
+                    <div className="w-1/6 flex items-center">
                         <span className="font-semibold">Status</span>
                         <Tooltip
                             className="-mb-0.25 md:mb-0"
@@ -57,7 +57,7 @@ const TransactionDetails = () => {
                     </div>
                 </div>
                 <div className="flex">
-                    <div className="w-1/6">
+                    <div className="w-1/6 flex items-center">
                         <span className="font-semibold">Timestamp</span>
                         <Tooltip
                             className="-mb-0.25 md:mb-0"
@@ -67,7 +67,7 @@ const TransactionDetails = () => {
                     <span className="text-gray-600">July 11, 2024 09:48:55 AM +UTC</span>
                 </div>
                 <div className="flex">
-                    <div className="w-1/6">
+                    <div className="w-1/6 flex items-center">
                         <span className="font-semibold">Block</span>
                         <Tooltip
                             className="-mb-0.25 md:mb-0"
@@ -77,7 +77,7 @@ const TransactionDetails = () => {
                     <span className="text-gray-600">#81940623 (17 block confirmations)</span>
                 </div>
                 <div className="flex">
-                    <div className="w-1/6">
+                    <div className="w-1/6 flex items-center">
                         <span className="font-semibold">From</span>
                         <Tooltip
                             className="-mb-0.25 md:mb-0"
@@ -95,7 +95,7 @@ const TransactionDetails = () => {
                     </div>
                 </div>
                 <div className="flex">
-                    <div className="w-1/6">
+                    <div className="w-1/6 flex items-center">
                         <span className="font-semibold">To</span>
                         <Tooltip
                             className="-mb-0.25 md:mb-0"
@@ -113,7 +113,7 @@ const TransactionDetails = () => {
                     </div>
                 </div>
                 <div className="flex">
-                    <div className="w-1/6">
+                    <div className="w-1/6 flex items-center">
                         <span className="font-semibold">Fee</span>
                         <Tooltip
                             className="-mb-0.25 md:mb-0"
@@ -123,7 +123,7 @@ const TransactionDetails = () => {
                     <span className="text-gray-600">0.00001298 VIC (Sponsor by Abstraction)</span>
                 </div>
                 <div className="flex">
-                    <div className="w-1/6">
+                    <div className="w-1/6 flex items-center">
                         <span className="font-semibold">Fee Payer</span>
                         <Tooltip
                             className="-mb-0.25 md:mb-0"
@@ -140,7 +140,7 @@ const TransactionDetails = () => {
                         </button>
                     </div>
                 </div>
-                <div className="flex">
+                <div className="flex flex items-center">
                     <div className="w-1/6">
                         <span className="font-semibold">Gas Price</span>
                         <Tooltip
@@ -150,7 +150,7 @@ const TransactionDetails = () => {
                     </div>
                     <span className="text-gray-600">0.25 Gwei  (0.00000000025 VIC)</span>
                 </div>
-                <div className="flex">
+                <div className="flex flex items-center">
                     <div className="w-1/6">
                         <span className="font-semibold">Gas Limit & Usage</span>
                         <Tooltip
@@ -161,7 +161,7 @@ const TransactionDetails = () => {
                     <span className="text-gray-600">67,493 | 51,917(76.92%)</span>
                 </div>
                 <div className="flex">
-                    <div className="w-1/6">
+                    <div className="w-1/6 flex items-center">
                         <span className="font-semibold">Nonce & Position</span>
                         <Tooltip
                             className="-mb-0.25 md:mb-0"
@@ -171,7 +171,7 @@ const TransactionDetails = () => {
                     <span className="text-gray-600">1248 | 1</span>
                 </div>
                 <div className="flex">
-                    <div className="w-1/6">
+                    <div className="w-1/6 flex items-center">
                         <span className="font-semibold">Input data</span>
                         <Tooltip
                             className="-mb-0.25 md:mb-0"

@@ -53,11 +53,10 @@ const OverviewInformation = ({option, setOption, options}: OverviewInformationPr
                     <div className="w-1/3">
                         <span className="font-semibold">VIC Balance</span>
                     </div>
-                    <div>
+                    <div className="flex items-center">
                         <span className="text-gray-600">0.34 VIC </span>
                         <span className="text-gray-400">($0.1)</span>
                         <Tooltip
-                            className="-mb-2"
                             title={'$0.3/VIC\n' + 'Price oracle from Abstraction'}
                         />
                     </div>
