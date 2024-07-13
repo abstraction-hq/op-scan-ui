@@ -39,7 +39,7 @@ const MoreInformation = ({}: MoreInformationProps) => {
             className="flex-1"
             title="More Information"
         >
-            <div className="md:-mx-2">
+            <div className="-mx-3 pt-6 space-y-1 md:-mx-2">
                 <Information />
             </div>
         </Card>

@@ -17,6 +17,7 @@ const AddressPage: React.FC = () => {
     return (
         <Layout>
             <div className="space-y-2">
+                <div className="mb-4 mt-2 text-3xl font-bold">Address</div>
                 <div className="flex space-x-2 lg:block lg:space-x-0 lg:space-y-2">
                     <Overview />
                     <MoreInformation />

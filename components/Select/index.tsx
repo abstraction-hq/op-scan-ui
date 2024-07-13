@@ -17,6 +17,7 @@ type SelectProps = {
     classButton?: string;
     classOption?: string;
     label?: string;
+    titleBox?: string;
     placeholder?: string;
     value: any;
     onChange: any;
@@ -28,6 +29,7 @@ const Select = ({
     classButton,
     classOption,
     label,
+    titleBox,
     placeholder,
     value,
     onChange,
