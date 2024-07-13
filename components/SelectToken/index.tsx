@@ -71,16 +71,17 @@ const SelectToken = ({
                             key={item.id}
                             value={item}
                         >
-                            <div key={item.id} className="flex items-center p-4 bg-white shadow rounded-lg justify-between">
+                            <div key={item.id} className="flex items-center px-4 py-2 bg-white shadow justify-between">
                                 <div>
-
+                                    <div>
+                                        <div className="flex items-center">
+                                            <img src={item.icon} alt={`${item.name} icon`} className="w-3 h-3 mr-2" />
+                                            <span className="text-gray-900 font-medium">{item.name} ({item.abs})</span>
+                                        </div>
+                                        <span className="text-gray-500">{item.sub} {item.abs}</span>
+                                    </div>
                                 </div>
-                                <img src={item.icon} alt={`${item.name} icon`} className="w-4 h-4 mr-4" />
-                                <div className="flex">
-                                    <span className="text-gray-900 font-medium">{item.name} ({item.abs})</span>
-                                    <span>{item.sub} {item.abs}</span>
-                                </div>
-                                <div className="flex items-center mt-1 text-gray-500">
+                                <div className="flex-col flex mt-1 text-gray-500">
                                     <span className="ml-2 text-gray-900 font-medium text-right">{item.value}</span>
                                     <span className="ml-2">@{item.rate}</span>
                                 </div>

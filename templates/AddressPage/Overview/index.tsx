@@ -19,7 +19,7 @@ const tokenArcs = [
         name: "Vibe",
         abs: "Vibe",
         value: "0",
-        sub: "5000000000"
+        sub: "5,000,000,000"
     },
     {
         id: "2",
@@ -27,7 +27,7 @@ const tokenArcs = [
         name: "Token A",
         abs: "TA",
         value: "0",
-        sub: "2000000"
+        sub: "2,000,000"
     }
 ]
 
