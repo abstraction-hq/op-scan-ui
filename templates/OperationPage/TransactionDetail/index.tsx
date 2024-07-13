@@ -14,8 +14,12 @@ const TransactionDetails = () => {
                         <span className="font-semibold">Transaction ID</span>
                         <Tooltip
                             className="-mb-0.25 md:mb-0"
-                            title={`A TxHash or transaction hash is a \nunique 66-character identifier that\n is generated whenever a \ntransaction is executed.`}
-                        />
+                            title={`A TxHash or transaction hash is a 
+                            unique 66-character identifier that
+                            is generated whenever a 
+                            transaction is executed.`}
+                        >
+                        </Tooltip>
                     </div>
                     <div>
                         <span className="text-gray-600">0x797a7fc39ce52b9f8891c5e41a3644641ce8e9475696f9396ae7c8e71c5a1da5</span>
