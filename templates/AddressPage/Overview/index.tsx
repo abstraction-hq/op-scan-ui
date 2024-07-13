@@ -1,22 +1,35 @@
 import Card from "@/components/Card";
 import Tooltip from "@/components/Tooltip";
 import {useState} from "react";
-import Select from "@/components/Select";
+import SelectToken from "@/components/SelectToken";
 
-const duration = [
+const tokenArcs = [
     {
         id: "0",
-        title: "All time",
+        icon: "/images/coin98.png",
+        name: "Coin 98",
+        abs: "C98",
+        value: "0.01",
+        sub: "0.03",
+        rate: "0.1578"
     },
     {
         id: "1",
-        title: "Month",
+        icon: "/images/copyright.png",
+        name: "Vibe",
+        abs: "Vibe",
+        value: "0",
+        sub: "5000000000"
     },
     {
         id: "2",
-        title: "Year",
-    },
-];
+        icon: "/images/copyright.png",
+        name: "Token A",
+        abs: "TA",
+        value: "0",
+        sub: "2000000"
+    }
+]
 
 type OverviewInformationProps = {
     option?: any;
@@ -53,7 +66,7 @@ const OverviewInformation = ({option, setOption, options}: OverviewInformationPr
                     <div className="w-1/3">
                         <span className="font-semibold">Other VRC Token Balance</span>
                     </div>
-                    <Select
+                    <SelectToken
                         className="shrink-0 min-w-[18.5rem]"
                         titleBox={'Token VRC'}
                         value={option}
@@ -69,7 +82,8 @@ const OverviewInformation = ({option, setOption, options}: OverviewInformationPr
 type OverviewProps = {};
 
 const Overview = ({}: OverviewProps) => {
-    const [time, setTime] = useState(duration[0]);
+    console.log(`mienpv :: ${JSON.stringify(tokenArcs[0].value)}`);
+    const [time, setTime] = useState(tokenArcs[0]);
 
 
     return (
@@ -78,7 +92,7 @@ const Overview = ({}: OverviewProps) => {
             title="Overview"
         >
             <div className="-mx-3 pt-6 space-y-1 md:-mx-2">
-                <OverviewInformation option={time} setOption={setTime} options={duration}/>
+                <OverviewInformation option={time} setOption={setTime} options={tokenArcs}/>
             </div>
         </Card>
     );

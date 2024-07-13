@@ -28,7 +28,7 @@ const Header = ({visible, showMenu, onClickBurger }: HeaderProps) => {
                             alt=""
                         />
                         <div className="text-3xl font-bold ml-2 mt-1">
-                            ABS SCAN
+                            Abstraction Scan
                         </div>
                     </div>
                 </div>
