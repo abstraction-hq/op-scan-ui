@@ -3,8 +3,8 @@
 import Layout from "@/components/Layout";
 import React from "react";
 import Transaction from "@/templates/AddressPage/Transaction";
-import TopTokens from "@/templates/AddressPage/TopTokens";
-import GreedIndex from "@/templates/AddressPage/GreedIndex";
+import Overview from "templates/AddressPage/Overview";
+import MoreInformation from "templates/AddressPage/MoreInformation";
 
 interface AddressPageProps {
     params: {
@@ -18,8 +18,8 @@ const AddressPage: React.FC = () => {
         <Layout>
             <div className="space-y-2">
                 <div className="flex space-x-2 lg:block lg:space-x-0 lg:space-y-2">
-                    <TopTokens />
-                    <GreedIndex />
+                    <Overview />
+                    <MoreInformation />
                 </div>
                 <Transaction />
             </div>
