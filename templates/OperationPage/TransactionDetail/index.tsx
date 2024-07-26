@@ -18,6 +18,20 @@ const capitalizeFirstLetter = (str: string) => {
     return str?.charAt(0).toUpperCase() + str?.slice(1);
 };
 
+const formatTimestamp = (timestamp: number) => {
+    const date = new Date(timestamp * 1000); // Convert to milliseconds
+
+    const day = String(date.getUTCDate()).padStart(2, '0');
+    const month = String(date.getUTCMonth() + 1).padStart(2, '0'); // Months are zero-based
+    const year = date.getUTCFullYear();
+
+    const hours = String(date.getUTCHours()).padStart(2, '0');
+    const minutes = String(date.getUTCMinutes()).padStart(2, '0');
+    const seconds = String(date.getUTCSeconds()).padStart(2, '0');
+
+    return `${month}/${day}/${year} ${hours}:${minutes}:${seconds}`;
+};
+
 // {
 //     "data": {
 //     "hash": "0x8334325b83372e00ff43b5072b41260c99ca75ad368b276770eb2f400e6ead46",
@@ -44,6 +58,8 @@ const capitalizeFirstLetter = (str: string) => {
 const TransactionDetails = (data: any) => {
     const dataTransaction = data.data || {};
     const {hash, transactionHash, blockNumber, timestamp, sender, action, status, gasFee, gasUsed} = dataTransaction || {};
+    const isSuccess = status === true;
+    const formattedTime = formatTimestamp(timestamp);
 
     return (
         <div className="mx-auto w-full p-4 rounded-lg">
@@ -89,13 +105,17 @@ const TransactionDetails = (data: any) => {
                         />
                     </div>
                     {/*<span className="text-green-600">Success</span>*/}
-                    <div className="flex justify-between items-center h-8 px-4 rounded-full bg-green-200">
+                    <div className={`flex justify-between items-center h-8 px-4 rounded-full ${
+                            isSuccess
+                                ? "bg-green-200"
+                                : "bg-red-200"
+                        }`}>
                         <Icon
                             className="!w-4 !h-4 shrink-0 mr-2 fill-primary-2"
                             name="check-circle"
                         />
-                        <div className="flex text-base-1l items-center grow">
-                            Success
+                        <div className="flex text-base-1l text-green-900 items-center grow">
+                            {isSuccess ? 'Success' : 'Fail'}
                         </div>
                     </div>
                 </div>
@@ -107,7 +127,7 @@ const TransactionDetails = (data: any) => {
                             title={'The date and time at which a transaction is produced.'}
                         />
                     </div>
-                    <span className="text-gray-600">July 11, 2024 09:48:55 AM +UTC</span>
+                    <span className="text-gray-600">{formattedTime}</span>
                 </div>
                 <div className="flex">
                     <div className="w-1/6 flex items-center">
@@ -117,7 +137,7 @@ const TransactionDetails = (data: any) => {
                             title={'Number of the block in which the transaction is recorded. Block confirmations indicate how many blocks have been added since the transaction was produced.'}
                         />
                     </div>
-                    <span className="text-gray-600">#81940623 (17 block confirmations)</span>
+                    <span className="text-gray-600">{`#${blockNumber} (17 block confirmations)`}</span>
                 </div>
                 <div className="flex">
                     <div className="w-1/6 flex items-center">
@@ -128,7 +148,7 @@ const TransactionDetails = (data: any) => {
                         />
                     </div>
                     <div>
-                        <span className="text-gray-600">0x4ce6F990e01f8bFb378079647D9D427Bc2d0AAf5</span>
+                        <span className="text-gray-600">{sender}</span>
                         <button className="group ml-3 text-0">
                             <Icon
                                 className="!w-5 !h-5 mb-3 fill-theme-tertiary transition-colors group-hover:fill-theme-primary"
@@ -202,16 +222,6 @@ const TransactionDetails = (data: any) => {
                         />
                     </div>
                     <span className="text-gray-600">{formatNumberWithCommas(gasUsed)}</span>
-                </div>
-                <div className="flex">
-                    <div className="w-1/6 flex items-center">
-                        <span className="font-semibold">Nonce & Position</span>
-                        <Tooltip
-                            className="-mb-0.25 md:mb-0"
-                            title={'The position of the transaction in the block.'}
-                        />
-                    </div>
-                    <span className="text-gray-600">1248 | 1</span>
                 </div>
                 {/*<div className="flex">*/}
                 {/*    <div className="w-1/6 flex items-center">*/}
