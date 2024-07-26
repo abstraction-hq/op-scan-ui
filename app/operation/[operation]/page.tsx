@@ -1,10 +1,10 @@
 'use client';
 
-import type { NextPage } from "next";
-import OperationPage from "@/templates/OperationPage";
+import OperationPage from '@/templates/OperationPage';
 
-const Operation: NextPage = () => {
-    return <OperationPage/>;
+const Operation: React.FC = () => {
+
+    return <OperationPage />;
 };
 
 export default Operation;

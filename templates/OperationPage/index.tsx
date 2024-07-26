@@ -11,11 +11,12 @@ interface OperationPageProps {
 }
 
 const OperationPage: React.FC = () => {
+    const operationId = '0x8334325b83372e00ff43b5072b41260c99ca75ad368b276770eb2f400e6ead46';
 
     return (
         <Layout>
             <div className="space-y-2">
-                <TransactionDetail />
+                <TransactionDetail operationId={operationId} />
             </div>
         </Layout>
     );

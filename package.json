@@ -28,7 +28,8 @@
     "recharts": "^2.12.7",
     "tailwind-merge": "^2.3.0",
     "tailwind-scrollbar": "^3.1.0",
-    "yarn": "^1.22.22"
+    "yarn": "^1.22.22",
+    "zustand": "^4.5.4"
   },
   "devDependencies": {
     "@types/node": "^20",
