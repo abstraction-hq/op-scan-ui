@@ -11,7 +11,11 @@ type TransactionProps = {
 };
 
 const formatNumberWithCommas = (string: string) => {
-    return string.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    return string?.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+};
+
+const capitalizeFirstLetter = (str: string) => {
+    return str?.charAt(0).toUpperCase() + str?.slice(1);
 };
 
 // {
@@ -74,7 +78,7 @@ const TransactionDetails = (data: any) => {
                             title={'The transaction type.'}
                         />
                     </div>
-                    <button className="px-2 text-white py-1 bg-gray-400 rounded">Approve</button>
+                    <button className="px-2 text-white py-1 bg-gray-400 rounded">{capitalizeFirstLetter(action?.type)}</button>
                 </div>
                 <div className="flex">
                     <div className="w-1/6 flex items-center">
