@@ -8,7 +8,7 @@ type TooltipProps = {
 
 const Tooltip = ({ className, title }: TooltipProps) => (
     <div
-        className={`inline-flex group ml-2 cursor-pointer ${className || ""}`}
+        className={`inline-flex group mr-2 cursor-pointer ${className || ""}`}
         data-tooltip-id="my-tooltip"
         data-tooltip-content={title}
     >

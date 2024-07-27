@@ -60,13 +60,13 @@ const TransactionDetails = (data: any) => {
     const {hash, transactionHash, blockNumber, timestamp, sender, action, status, gasFee, gasUsed} = dataTransaction || {};
     const isSuccess = status === true;
     const formattedTime = formatTimestamp(timestamp);
+    const target = action?.details[0].target;
 
     return (
         <div className="mx-auto w-full p-4 rounded-lg">
             <div className="flex flex-col space-y-4">
                 <div className="flex">
                     <div className="w-1/6 flex items-center">
-                        <span className="font-semibold">Transaction ID</span>
                         <Tooltip
                             className="-mb-0.25 md:mb-0"
                             title={`A TxHash or transaction hash is a 
@@ -75,6 +75,7 @@ const TransactionDetails = (data: any) => {
                             transaction is executed.`}
                         >
                         </Tooltip>
+                        <span className="font-semibold">Transaction ID</span>
                     </div>
                     <div>
                         <span className="text-gray-600">{hash}</span>
@@ -88,21 +89,21 @@ const TransactionDetails = (data: any) => {
                 </div>
                 <div className="flex">
                     <div className="w-1/6 flex items-center">
-                        <span className="font-semibold">Type</span>
                         <Tooltip
                             className="-mb-0.25 md:mb-0"
                             title={'The transaction type.'}
                         />
+                        <span className="font-semibold">Type</span>
                     </div>
                     <button className="px-2 text-white py-1 bg-gray-400 rounded">{capitalizeFirstLetter(action?.type)}</button>
                 </div>
                 <div className="flex">
                     <div className="w-1/6 flex items-center">
-                        <span className="font-semibold">Status</span>
                         <Tooltip
                             className="-mb-0.25 md:mb-0"
                             title={'The status of the transaction.'}
                         />
+                        <span className="font-semibold">Status</span>
                     </div>
                     {/*<span className="text-green-600">Success</span>*/}
                     <div className={`flex justify-between items-center h-8 px-4 rounded-full ${
@@ -121,31 +122,31 @@ const TransactionDetails = (data: any) => {
                 </div>
                 <div className="flex">
                     <div className="w-1/6 flex items-center">
-                        <span className="font-semibold">Timestamp</span>
                         <Tooltip
                             className="-mb-0.25 md:mb-0"
                             title={'The date and time at which a transaction is produced.'}
                         />
+                        <span className="font-semibold">Timestamp</span>
                     </div>
                     <span className="text-gray-600">{formattedTime}</span>
                 </div>
                 <div className="flex">
                     <div className="w-1/6 flex items-center">
-                        <span className="font-semibold">Block</span>
                         <Tooltip
                             className="-mb-0.25 md:mb-0"
                             title={'Number of the block in which the transaction is recorded. Block confirmations indicate how many blocks have been added since the transaction was produced.'}
                         />
+                        <span className="font-semibold">Block</span>
                     </div>
                     <span className="text-gray-600">{`#${blockNumber} (17 block confirmations)`}</span>
                 </div>
                 <div className="flex">
                     <div className="w-1/6 flex items-center">
-                        <span className="font-semibold">From</span>
                         <Tooltip
                             className="-mb-0.25 md:mb-0"
                             title={'The sending party of the transaction.'}
                         />
+                        <span className="font-semibold">From</span>
                     </div>
                     <div>
                         <span className="text-gray-600">{sender}</span>
@@ -159,14 +160,14 @@ const TransactionDetails = (data: any) => {
                 </div>
                 <div className="flex">
                     <div className="w-1/6 flex items-center">
-                        <span className="font-semibold">To</span>
                         <Tooltip
                             className="-mb-0.25 md:mb-0"
                             title={'The receiving party of the transaction (could be a contract address).'}
                         />
+                        <span className="font-semibold">To</span>
                     </div>
                     <div>
-                        <span className="text-gray-600">0x29114a539Cd407976E1b4b4147BF19e31858804</span>
+                        <span className="text-gray-600">{target}</span>
                         <button className="group ml-3 text-0">
                             <Icon
                                 className="!w-5 !h-5 mb-3 fill-theme-tertiary transition-colors group-hover:fill-theme-primary"
@@ -177,11 +178,11 @@ const TransactionDetails = (data: any) => {
                 </div>
                 <div className="flex">
                     <div className="w-1/6 flex items-center">
-                        <span className="font-semibold">Fee</span>
                         <Tooltip
                             className="-mb-0.25 md:mb-0"
                             title={'Amount paid to process the transaction in Ether and fiat value.'}
                         />
+                        <span className="font-semibold">Fee</span>
                     </div>
                     <span className="text-gray-600">0.00001298 VIC (Sponsor by Abstraction)</span>
                 </div>
@@ -205,21 +206,21 @@ const TransactionDetails = (data: any) => {
                 {/*</div>*/}
                 <div className="flex flex items-center">
                     <div className="w-1/6">
-                        <span className="font-semibold">Gas Price</span>
                         <Tooltip
                             className="-mb-0.25 md:mb-0"
                             title={'Cost per unit of gas spent for the transaction, in VIC and Gwei.'}
                         />
+                        <span className="font-semibold">Gas Price</span>
                     </div>
-                    <span className="text-gray-600">0.25 Gwei  (0.00000000025 VIC)</span>
+                    <span className="text-gray-600">{gasFee}</span>
                 </div>
                 <div className="flex flex items-center">
                     <div className="w-1/6">
-                        <span className="font-semibold">Gas Limit & Usage</span>
                         <Tooltip
                             className="-mb-0.25 md:mb-0"
                             title={'Maximum amount of gas allocated for the transaction & the amount eventually used. Normal VIC transfers involve 21,000 gas units while contracts involve higher values.'}
                         />
+                        <span className="font-semibold">Gas Limit & Usage</span>
                     </div>
                     <span className="text-gray-600">{formatNumberWithCommas(gasUsed)}</span>
                 </div>
