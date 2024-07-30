@@ -138,7 +138,7 @@ const TransactionDetails = (data: any) => {
                         />
                         <span className="font-semibold">Block</span>
                     </div>
-                    <span className="font-mono">{`#${blockNumber} (17 block confirmations)`}</span>
+                    <span className="font-mono">{`#${blockNumber}`}</span>
                 </div>
                 <div className="flex">
                     <div className="w-1/6 flex items-center">
@@ -184,7 +184,7 @@ const TransactionDetails = (data: any) => {
                         />
                         <span className="font-semibold">Fee</span>
                     </div>
-                    <span className="font-mono">0.00001298 VIC (Sponsor by Abstraction)</span>
+                    <span className="font-mono">0.000001 VIC <span className="text-green-500">(Sponsor by Abstraction)</span></span>
                 </div>
                 {/*<div className="flex">*/}
                 {/*    <div className="w-1/6 flex items-center">*/}

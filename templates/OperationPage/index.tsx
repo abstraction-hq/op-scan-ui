@@ -5,18 +5,15 @@ import React from "react";
 import TransactionDetail from "@/templates/OperationPage/TransactionDetail";
 
 interface OperationPageProps {
-    params: {
-        id: string;
-    };
+    userOpHash: string;
 }
 
-const OperationPage: React.FC = () => {
-    const operationId = '0x8334325b83372e00ff43b5072b41260c99ca75ad368b276770eb2f400e6ead46';
+const OperationPage = ({ userOpHash }: OperationPageProps) => {
 
     return (
         <Layout>
             <div className="space-y-2">
-                <TransactionDetail operationId={operationId} />
+                <TransactionDetail operationId={userOpHash} />
             </div>
         </Layout>
     );
