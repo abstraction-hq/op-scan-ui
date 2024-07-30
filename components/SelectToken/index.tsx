@@ -64,7 +64,7 @@ const SelectToken = ({
                 leaveFrom="scale-100 opacity-100"
                 leaveTo="scale-95 opacity-0"
             >
-                <ListboxOptions className="absolute top-full left-0 right-0 z-2 mt-0.5 border-2 border-theme-stroke bg-theme-on-surface-1 rounded-xl outline-none overflow-hidden">
+                {/* <ListboxOptions className="absolute top-full left-0 right-0 z-2 mt-0.5 border-2 border-theme-stroke bg-theme-on-surface-1 rounded-xl outline-none overflow-hidden">
                     {items.map((item) => (
 
                         <ListboxOption
@@ -88,7 +88,7 @@ const SelectToken = ({
                             </div>
                         </ListboxOption>
                     ))}
-                </ListboxOptions>
+                </ListboxOptions> */}
             </Transition>
         </Listbox>
     </div>

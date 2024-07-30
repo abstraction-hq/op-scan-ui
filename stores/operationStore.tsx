@@ -17,7 +17,7 @@ const useOperationStore = create<OperationStoreState>((set) => ({
             const response = await fetch(`https://wallet.abstraction.world/api/v1/tx/${operationId}`);
             const data = await response.json();
             set({ data, loading: false });
-        } catch (error) {
+        } catch (error: any) {
             set({ error: error.message, loading: false });
         }
     }
